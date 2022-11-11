@@ -1,0 +1,9 @@
+what is main benefit of your project.
+how it is unique to other projects avalabile in market
+what all sensors you have used
+what do each sensor do
+which app you are using to read the data
+which platform you are using
+what is the name of the board and it's applications
+why you use the nodemcu
+what are the application of the project

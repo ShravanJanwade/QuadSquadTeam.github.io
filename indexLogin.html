@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Averia+Sans+Libre:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+    <title>TWM</title>
+  </head>
+  <body>
+    <div class="header d-flex justify-content-end" id="myHeader">
+      <form action="register.html">
+        <!-- <p>Welcome</p> -->
+        <button type="submit" class="SignUp btn btn-success">LogOut</button>
+      </form>
+    </div>
+    <div class="sideNav">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+          >&times;</a
+        >
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="main-container">
+      <div class="carousel">
+        <div class="image-container" id="imgs">
+          <img src="images/highlight01.jpg" alt="bol" />
+          <h1 class="text-box">Need Workers For Farm?</h1>
+          <img src="images/highlight02.jpg" alt="pizza" />
+
+          <img src="images/highlight03.jpg" alt="brunch" />
+
+          <img src="images/highlight04.jpg" alt="pasta" />
+        </div>
+      </div>
+
+      <div class="main">
+        <nav class="nav-bar flex-div">
+          <div class="nav-right">
+            <img class="logo" src="images/logo.jpg" alt="" />
+          </div>
+          <div class="anchors nav-center d-flex justify-content-center">
+            <a href="index.html"><p class="pages">Home</p></a>
+            <a href="about.html"><p class="pages">About</p></a>
+            <a href="contact.html"><p class="pages">Contact</p></a>
+            <a href="services.html"><p class="pages">Services</p></a>
+          </div>
+
+          <div class="nav-left">
+            <div class="container">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="secondary-container flex-div">
+      <div class="information">
+        <h1 class="welcome fw-bold">Welcome</h1>
+        <h2 class="sec-head fw-bold">This is our Agriculture System</h2>
+        <div class="content">
+          Our Website Focuses on the lack of avaliblity of Workers and tenant
+          who are willing to work in agriculture field but don't find the
+          correct place to get the work.Our platform focuses on this issue and
+          Resolve it.One of The Working Service that we give can be seen by
+          clicking down 👇
+        </div>
+        <a href="starter/index.html"
+          ><button type="button" class="btn btn-warning btn-lg button-info">
+            Workers Solution
+          </button></a
+        >
+      </div>
+      <div class="small-box">
+        <p>Never Give Up</p>
+      </div>
+      <div class="second-slider">
+        <img src="images/slide01.jpg" alt="" />
+      </div>
+    </div>
+
+    <!-- Number Counter -->
+    <div class="sec-body">
+      <div class="container py-5 text-white">
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <h1 class="pb-3 h5">OUR USERS</h1>
+          </div>
+          <div class="col-md-3">
+            <span id="count1" class="display-4">00</span>
+            <p>Total Users</p>
+          </div>
+          <div class="col-md-3">
+            <span id="count2" class="display-4">00</span>
+            <p>Active Users</p>
+          </div>
+          <div class="col-md-3">
+            <span id="count3" class="display-4">00</span>
+            <p>Online</p>
+          </div>
+          <div class="col-md-3">
+            <span id="count4" class="display-4">00</span>
+            <p>Reach</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="log">
+              <a href="#">
+                <img src="images/logo.jpg" alt="Image" class="logo1" />
+              </a>
+            </div>
+            <!-- end logo -->
+            <p>
+              Wild flowers , plants and fungi are the life support for all our
+              wildlife and their colour and character
+            </p>
+          </div>
+          <!-- end col-4 -->
+          <div class="col-lg-8">
+            <h6 class="widget-title wtn">OUR NEWSLETTER!</h6>
+            <form>
+              <input
+                type="text"
+                placeholder="enter your email address...."
+                class="wtn-email"
+              />
+              <input type="submit" value="SUBSCRIBE" class="wtn-sub" />
+            </form>
+          </div>
+          <!-- end col-8 -->
+          <div class="footer-separator"></div>
+          <!-- end footer-separator -->
+          <div class="col-md-4">
+            <h6 class="widget-title">WILD PLANTS</h6>
+            <ul class="footer-menu">
+              <li>Discover Wild Plants</li>
+              <li>Important Plant Areas</li>
+              <li>Issues of Plants</li>
+            </ul>
+          </div>
+          <!-- end col-4 -->
+          <div class="col-md-4">
+            <h6 class="widget-title">NATURE REZERVES</h6>
+            <ul class="footer-menu">
+              <li>Ranscombe Farm</li>
+              <li>Munsary Peatlands</li>
+              <li>Cae Blaen-dyffryn</li>
+            </ul>
+          </div>
+          <!-- end col-4 -->
+          <div class="col-md-4">
+            <h6 class="widget-title">CONTACT INFO</h6>
+            <p>
+              +1 (850) 344 0 66<br />
+              organic@seodo.com.ua
+            </p>
+          </div>
+          <!-- end col-4 -->
+
+          <!-- end col-12 -->
+        </div>
+        <!-- end row -->
+      </div>
+      <!-- end container -->
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="register.css">
+    <title>Signup</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+     <form action="index.html">
+        <button type="submit" class="login btn btn-primary">Home</button>
+      </form>
+   <div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="email" class="label">E-mail</label>
+					<input id="email" type="email" class="input correctMail">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass" type="password" class="input correctPass">
+				</div>
+				<div class="group">
+					<input id="check" type="checkbox" class="check" checked>
+					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+				</div>
+				<div class="group">
+					<input type="submit" class="button" id="sign-in" value="Sign In">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Forgot Password?</a>
+				</div>
+			</div>
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="user" class="label">Username</label>
+					<input id="user" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass"  type="password" class="input inputPass" >
+				</div>
+				<div class="group">
+					<label for="repeatPass class="label">Repeat Password</label>
+					<input id="repeatPass"  type="password" class="input">
+				</div>
+				<div class="group">
+					<label for="email" class="label">Email Address</label>
+					<input id="email"  type="text" class="input inputMail">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign Up" id="sign-up">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk" style="margin-top: -20px">
+					<label for="tab-1">Already Member?</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+ <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyB-7ei79XtunlxEIqBgvjAbUA1roF2jzTU",
+        authDomain: "quadsquad-57ced.firebaseapp.com",
+        projectId: "quadsquad-57ced",
+        storageBucket: "quadsquad-57ced.appspot.com",
+        messagingSenderId: "189436764559",
+        appId: "1:189436764559:web:be4cedc49c647da0d1abfa",
+        measurementId: "G-0DX8QKM89Q",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      import {
+        getFirestore,
+        doc,
+        getDoc,
+        setDoc,
+        collection,
+        addDoc,
+        updateDoc,
+        deleteDoc,
+        deleteField,
+      } from "https://www.gstatic.com/firebasejs/9.9.0/firebase-firestore.js";
+
+      const db = getFirestore();
+      // const auth=firebase.auth();
+      // const database=firebase.database()
+      const userName=document.getElementById('user')
+      const password=document.querySelector('.inputPass')
+      const repeatPass=document.getElementById('repeatPass')
+      const email=document.querySelector('.inputMail')
+      const signup=document.getElementById('sign-up')
+
+      async function AddDocument_AutoID() {
+        console.log(password.value)
+        console.log(userName.value)
+        console.log(repeatPass.value)
+        console.log(email.value)
+        var ref = doc(db, "Labour_list",email.value);
+        const docRef = await setDoc(ref, {
+          userName: userName.value,
+          password: password.value,
+          repeatPass: repeatPass.value,
+          email: email.value,
+        })
+          .then(() => {
+            alert("Data Added Successfully");
+          })
+          .catch((error) => {
+            alert("Unsuccessful operation,error:" + error);
+          });
+      }
+      //   auth.createUserWithEmailAndPassword(email,password).then(function(){
+      //     var user=auth.currentUser
+      //     var dr=database.ref();
+      //   })
+      signup.addEventListener("click", AddDocument_AutoID);
+
+
+      const corPass=document.querySelector('.correctPass')
+      const corMail=document.querySelector('.correctMail')
+      const signin=document.getElementById('sign-in')
+
+      async function validMail(){
+        console.log(corMail.value)
+        var ref=doc(db,"Labour_list",corMail.value)
+        const docSnap=await getDoc(ref)
+        console.log(docSnap._key.path.segments[1])
+        console.log(docSnap)
+        if(docSnap.exists()){
+          
+          console.log("Hi i am there")
+            
+            window.location.href="indexLogin.html";
+        }else{
+          alert("No such element")
+        }
+      }
+
+      signin.addEventListener("click",validMail)
+    </script>
+
+  </body>
+</html>

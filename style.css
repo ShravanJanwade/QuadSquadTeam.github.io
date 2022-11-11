@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Poppins";
+  font-size: 17px;
+*/
+  font-family: "Nunito", sans-serif;
+}
+.header {
+  padding: 5px 12px;
+  background: #262626;
+  color: #f1f1f1;
+  z-index: 17;
+  height: 45px;
+}
+
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+.nav-bar {
+  width: 1300px;
+  max-width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  background: url(../images/pattern-bg.png) center #009a4e;
+  color: #fff;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  top: 50px;
+  padding: 30px 0;
+  transform: translateX(-50%);
+  border-radius: 4px;
+  z-index: 3;
+}
+.nav-right {
+  margin-right: -220px;
+}
+.nav-center p {
+  margin-left: 70px;
+  font-weight: 900;
+  font-size: x-large;
+}
+
+.logo {
+  width: 55px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: -7.5px;
+}
+.flex-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu {
+  width: 55px;
+}
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.nav-left {
+  margin-right: 100px;
+}
+/* Side Nav Bar */
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.sidenav {
+  z-index: 10;
+}
+#main {
+  transition: margin-left 0.5s;
+  padding: 16px;
+}
+.ham-disable {
+  display: none;
+  transition: 1s;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Main container */
+.main-container {
+  width: 100%;
+  height: 730px;
+}
+.main-container img {
+  height: 100%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.carousel {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 101.5%;
+  overflow: hidden;
+  position: absolute;
+}
+.image-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 1s ease-in-out;
+}
+.carousel img {
+  object-fit: cover;
+  height: 730px;
+}
+
+.text-box {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  left: 5%;
+  color: white;
+  font-size: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Secondary Container */
+.secondary-container {
+  height: 735px;
+  width: 100%;
+  padding-top: 100px;
+}
+
+.header button {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.secondary-container .information {
+  height: 600px;
+  width: 100%;
+}
+.secondary-container .information h1 {
+  font-size: 100px;
+  color: green;
+  font-weight: 990;
+  margin-left: 25%;
+}
+.secondary-container .information .content {
+  margin-left: 25%;
+  font-size: large;
+}
+.secondary-container .second-slider {
+  height: 600px;
+  width: 100%;
+}
+
+.secondary-container .second-slider img {
+  margin-left: 50px;
+  margin-top: 20px;
+  width: 40%;
+  height: 75%;
+  border-radius: 15px;
+  position: absolute;
+}
+.sec-head {
+  margin-left: 27%;
+  /* margin-right: 30%; */
+}
+.button-info {
+  margin-left: 27%;
+}
+
+.small-box {
+  height: 200px;
+  width: 150px;
+  background-color: white;
+  color: #009a4e;
+  position: absolute;
+  left: 750px;
+  z-index: 12;
+  top: 1150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: 900;
+  border-radius: 5px;
+  box-shadow: -0.2em 0 0.4em rgb(212, 203, 203);
+  padding: 10px;
+  font-family: "Averia Sans Libre", cursive;
+}
+.count-container {
+  background-color: #6f4e37;
+}
+.count-container p {
+  text-align: center;
+}
+.sec-body {
+  background-color: white;
+  color: #009a4e;
+}
+.sec-body {
+  height: 400px;
+}
+.col-md-3 {
+  color: #009a4e;
+  font-size: x-large;
+  font-weight: 900;
+  font-family: "Averia Sans Libre", cursive;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  background: url(../images/pattern-bg.png) center #009a4e;
+  background-size: cover;
+  color: #fff;
+  border-top: 3px solid #fbc50b;
+}
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1140px;
+  }
+}
+.footer .logo1 {
+  width: 50px;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+.anchors a {
+  color: white;
+  text-decoration: none;
+}
+
+.wtn {
+  font-size: x-large;
+  margin-left: 150px;
+  text-decoration: dashed;
+}
+.wtn-email {
+  width: 550px;
+  height: 50px;
+  padding: 27px;
+}
+
+.wtn-sub {
+  width: 150px;
+  height: 57px;
+  background-color: #009a4e;
+  margin-left: 9px;
+}
+.wtn-sub:hover {
+  background-color: rgba(107, 228, 117, 0.961);
+  transition: ease-in 0.2s;
+}
